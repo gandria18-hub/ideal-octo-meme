@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Lamaran Kerja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Portal Lamaran Kerja</h1>
+            <p>Kumpulkan semua dokumen lamaran Anda di satu tempat</p>
+        </header>
+
+        <main>
+            <!-- Form Input -->
+            <section class="form-section">
+                <h2>Tambah Lamaran Baru</h2>
+                <form id="applicationForm">
+                    <div class="form-group">
+                        <label for="companyName">Nama Perusahaan:</label>
+                        <input type="text" id="companyName" name="companyName" required placeholder="Contoh: PT ABC Indonesia">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="position">Posisi yang Dilamar:</label>
+                        <input type="text" id="position" name="position" required placeholder="Contoh: Front End Developer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="applicationDate">Tanggal Lamaran:</label>
+                        <input type="date" id="applicationDate" name="applicationDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status:</label>
+                        <select id="status" name="status" required>
+                            <option value="">-- Pilih Status --</option>
+                            <option value="submitted">Sudah Dikirim</option>
+                            <option value="reviewing">Sedang Diproses</option>
+                            <option value="interview">Interview</option>
+                            <option value="accepted">Diterima</option>
+                            <option value="rejected">Ditolak</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Catatan:</label>
+                        <textarea id="notes" name="notes" placeholder="Tambahkan catatan atau link lamaran Anda..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvFile">Upload CV:</label>
+                        <input type="file" id="cvFile" name="cvFile" accept=".pdf,.doc,.docx">
+                        <small>Format: PDF, DOC, atau DOCX (Opsional)</small>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Simpan Lamaran</button>
+                </form>
+            </section>
+
+            <!-- Daftar Lamaran -->
+            <section class="applications-section">
+                <h2>Daftar Lamaran Saya</h2>
+                <div id="applicationsContainer" class="applications-container">
+                    <p class="empty-state">Belum ada lamaran. Tambahkan lamaran pertama Anda!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Portal Lamaran Kerja | Dibuat dengan ❤️ untuk membantu perjalanan karir Anda</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
